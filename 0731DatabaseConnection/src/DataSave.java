@@ -50,7 +50,7 @@ public class DataSave {
 			System.out.println(e.getMessage());
 			//예외 내용을 추적  
 			e.printStackTrace();
-		}finally {
+		}finally { 
 			//사용을 다한경우 닫기
 			try {
 				if(rs != null)rs.close();

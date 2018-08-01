@@ -16,7 +16,7 @@ public class OracleInsert {
 			con = DriverManager.getConnection("jdbc:oracle:thin:@10.211.55.3:1521:XE","scott", "tiger");
 			//SQL 실행 객체를 생성 : sql을 매개변수로 해서 생성
 			//데이터 삽입 
-			/*
+			/* 
 			pstmt= con.prepareStatement("insert into dept(deptno, dname, loc)"+"values(80,'영업1','의정부')");
 			*/
 			/*

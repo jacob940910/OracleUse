@@ -15,7 +15,7 @@ public class DBPracticeMain {
 		System.out.print("부서번호 : ");
 		int deptno = sc.nextInt();
 	
-		
+		 
 		try {		
 					//드라이버 클래스 로드
 					Class.forName("oracle.jdbc.driver.OracleDriver");

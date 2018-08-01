@@ -26,7 +26,7 @@ public class DataSaveMap {
 			// sql실행
 			rs = pstmt.executeQuery();
 			//데이터 읽기
-			//행단위로 읽기
+			//행단위로 읽기 
 			while(rs.next()) {
 				//하나의 행을 저장할 DTO 객체 생성 
 				Dept dept = new Dept();

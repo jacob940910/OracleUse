@@ -5,7 +5,7 @@ public class OracleMain {
 
 	public static void main(String[] args) {
 		Connection con = null;
-		
+		 
 		try {
 			//사용하는 데이터 베이스마다 로드하는 클래스 이름은 결정되어있습니다.
 			Class.forName("oracle.jdbc.driver.OracleDriver");

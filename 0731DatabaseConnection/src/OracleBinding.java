@@ -23,7 +23,7 @@ public class OracleBinding {
 			con = DriverManager.getConnection("jdbc:oracle:thin:@10.211.55.3:1521:XE","scott", "tiger");
 			System.out.println("연결 성공!");
 			
-			//SQL실행객체 생성
+			//SQL실행객체 생성 
 			pstmt =con.prepareStatement("delete from dept where deptno = ?");
 			pstmt.setInt(1, deptno);
 			//SQL 실행 

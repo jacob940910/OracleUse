@@ -17,7 +17,7 @@ public class Dept {
 		this.dname = dname;
 	}
 	public String getLoc() {
-		return loc;
+		return loc; 
 	}
 	public void setLoc(String loc) {
 		this.loc = loc;

@@ -12,7 +12,7 @@ public class DBConectMain {
 		//테이터베이스연결 변수 선언
 		//반드시 close()를 호출해야 하므로 finally에서 close()를 호출 
 		Connection con = null;
-		try {
+		try { 
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			con = DriverManager.getConnection("jdbc:oracle:thin:@192.168.0.234:1521:XE","scott", "tiger");
 			System.out.println(con);

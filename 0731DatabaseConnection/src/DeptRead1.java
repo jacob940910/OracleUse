@@ -28,7 +28,7 @@ public class DeptRead1 {
 				System.out.print(rs.getString("loc")+"\n");
 			}
 			
-		}catch(Exception e) {
+		}catch(Exception e) { 
 			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}finally {

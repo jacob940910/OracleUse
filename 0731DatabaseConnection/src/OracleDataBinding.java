@@ -12,7 +12,7 @@ public class OracleDataBinding {
 		PreparedStatement pstmt= null;
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.print("부서번호 : ");
+		System.out.print("부서번호 : "); 
 		int deptno = sc.nextInt();
 		System.out.print("부서이름 : ");
 		//이전에남아있던 Enter를 제거하기 위한 코드입니다.
