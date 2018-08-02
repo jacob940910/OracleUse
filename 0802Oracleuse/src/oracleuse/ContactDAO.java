@@ -1,5 +1,5 @@
 package oracleuse;
-
+ 
 import java.util.List;
 
 public interface ContactDAO {

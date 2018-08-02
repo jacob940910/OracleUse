@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.List;
-
+ 
 public class ContactDaoImpl implements ContactDAO {
 	//모든 메소드에서 공통으로 사용할 변수 선언
 	private Connection con;

@@ -1,5 +1,5 @@
 
-public class TestMain {
+public class TestMain { 
 	public static void main(String []args) {
 		/*
 		// 생성자를 이용해서 객체를 생성 T obj1 = new T(); T obj2 = new T();

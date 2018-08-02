@@ -1,6 +1,6 @@
 package oracleuse;
 
-import java.sql.Date;
+import java.sql.Date; 
 
 public class Contact {
 	private int num;
