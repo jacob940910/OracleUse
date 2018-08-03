@@ -6,7 +6,7 @@ public interface ContactDAO {
 	//데이터를 삽입하는 메소드
 	public boolean insertContact (Contact contact);
 	
-	//데이터를 수정하는 메소드
+	//데이터를 수정하는 메소드 
 	public boolean updateContact (Contact contact);
 	
 	//데이터를 삭제하는 메소드

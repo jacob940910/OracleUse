@@ -4,8 +4,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
- 
+  
 public class ContactDaoImpl implements ContactDAO {
 	//모든 메소드에서 공통으로 사용할 변수 선언
 	private Connection con;
@@ -150,14 +151,74 @@ public class ContactDaoImpl implements ContactDAO {
 
 	@Override
 	public List<Contact> allContact() {
-		// TODO Auto-generated method stub
-		return null;
+		//읽어온 데이터를 저장하기 위한 리스트 생성 
+		List<Contact> list = new ArrayList<Contact>();
+		connect();
+		try {
+			//contact 테이블에 있는 전체 데이터를 가져오는 SQL 실행 객체
+			//를 생성합니다.
+			pstmt = con.prepareStatement("select num, name, phone, email, birthday " + " from contact ");
+			//select구문 실행
+			rs = pstmt.executeQuery();
+			
+			//반복문을 이용해서 데이터를 읽어서 List에 저장
+			while(rs.next()) {
+				Contact contact = new Contact();
+				contact.setNum(rs.getInt("num"));
+				contact.setName(rs.getString("name"));
+				contact.setPhone(rs.getString("phone"));
+				contact.setEmail(rs.getString("email"));
+				contact.setBirthday(rs.getDate("birthday"));
+				
+				
+				//읽은 데이터를 리스트에 저장
+				list.add(contact);
+			}
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+		
+		
+		close();
+		return list;
 	}
 
 	@Override
 	public List<Contact> nameContact(String name) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Contact> list = new ArrayList<Contact>();
+		connect();
+		
+		try {
+			//contact 테이블의 name 컬럼에 name의 값이 포함된 데이터를 조회하는 SQL만들기 
+			pstmt = con.prepareStatement("select * from contact where name like ? ");
+			//물음표에 데이터 바인딩 하기 
+			pstmt.setString(1, "%" + name +"%");
+			//SQL 실행하기  
+			rs = pstmt.executeQuery();
+			//데티어를 읽어서 list에 저장하기  
+			while(rs.next()) {
+				Contact contact = new Contact();
+				contact.setNum(rs.getInt("num"));
+				contact.setName(rs.getString("name"));
+				contact.setPhone(rs.getString("phone"));
+				contact.setEmail(rs.getString("email"));
+				contact.setBirthday(rs.getDate("birthday"));
+				
+				list.add(contact);
+			}
+			
+		
+			
+			
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+		
+		
+		close();
+		return list;
 	}
 
 }

@@ -10,7 +10,7 @@ public class TestMain {
         System.out.println(obj2.hashCode());
 
 	    int a = 10;
-	    int b = 10;
+	    int b = 10; 
 	    
 		
         // 10을 저장하고 있는 같은 공간을 a,b로 표시 (해시코드 출력시 이용 코드)

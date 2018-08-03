@@ -1,18 +1,30 @@
 package oracleuse;
 
-import java.util.Calendar;
+
+
 import java.sql.Date;
- 
+import java.util.Calendar;
+import java.util.List;
+
+  
 public class ContactMain {
 
 	public static void main(String[] args) {
+		
+		
+		
+		
+		
+		/*
 		//인터페이스나 클래스를 상속한 경우에는 
 		//상위 인터페이스나  클래스 이름으로 변수를 만들고
 		//하위 클래스의 인스턴스를 생성해서 대입합니다.
 		ContactDAO dao = new ContactDaoImpl();
+		*/
+		/*
 		Contact contact = new Contact();
 		contact.setNum(1);
-		contact.setName("이승환");
+		contact.setName("제시");
 		contact.setPhone("01094416351");
 		contact.setEmail("dltmdghks94@gmail.com");
 		
@@ -27,6 +39,7 @@ public class ContactMain {
 		
 		Date birthDay = new Date(cal.getTimeInMillis());
 		contact.setBirthday(birthDay);
+		*/
 		/*
 		//데이터를 업데이트하는 메소드
 		boolean r = dao.updateContact(contact);
@@ -45,6 +58,7 @@ public class ContactMain {
 			System.out.println("삽입실패!");
 		}
 		*/
+		/*
 		//데이터를 삭제하는메소드 
 		boolean r = dao.deleteContact(5);
 		if(r == true) {
@@ -52,6 +66,25 @@ public class ContactMain {
 		}else {
 			System.out.println("삭제실패!");
 		}
+		*/
+		/*
+		List<Contact> list = dao.allContact();
+		//System.out.println(list);
+		for(Contact contact : list) {
+			System.out.println(contact);
+		}
+		*/
+		/*
+		List<Contact> list = dao.nameContact("이");
+		//System.out.println(list);
+		for(Contact contact : list) {
+			System.out.println(contact);
+		}
+		
+		*/
+		
+		new ContactView();
+
 
 	}
 

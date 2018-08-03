@@ -10,7 +10,7 @@ public class Contact {
 	private Date birthday;
 	
 	public int getNum() {
-		return num;
+		return num; 
 	}
 	public void setNum(int num) {
 		this.num = num;
